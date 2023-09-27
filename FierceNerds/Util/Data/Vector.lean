@@ -1,8 +1,6 @@
-import FierceNerds.Util
-import FierceNerds.Generic
 import Mathlib.Data.Vector
 
-open FierceNerds Util Generic
+open FierceNerds Util
 
 namespace FierceNerds.Util.Data
 

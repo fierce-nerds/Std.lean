@@ -3,8 +3,6 @@ import FierceNerds.Util.UniqueByTheorem
 
 namespace FierceNerds.Util.ListUniqueBy
 
-open FierceNerds Util
-
 variable {α β : Type u} {f : α → β}
 variable [iBEqA : BEq α] [iReprListA : Repr (List α)] [iBEqListA : BEq (List α)]
 variable [iDecidableEqOfβ : DecidableEq β]

@@ -2,8 +2,6 @@ import FierceNerds.Util.UniqueBy
 
 namespace FierceNerds.Util.UniqueBy
 
-open FierceNerds Util
-
 theorem replaceByKeyPreservesUniqueness
   [iBEq : BEq α]
   (x y : α)

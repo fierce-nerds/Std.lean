@@ -1,7 +1,5 @@
-import FierceNerds.Util
-import FierceNerds.Generic
 
-open FierceNerds Util Generic
+open FierceNerds Util
 
 namespace FierceNerds.Util
 

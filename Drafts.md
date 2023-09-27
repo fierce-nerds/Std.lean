@@ -8,8 +8,16 @@
 
 * Type
   * Regular
-  * Subtype
-  * Field of a regular type
+    * Generic
+      * `inductive`
+      * `structure`
+      * `def` | `abbrev`
+    * Subtype
+      * `def` | `abbrev`
+    * Specialization (concrete type of a type family)
+      * Examples
+        * `abbrev Point := Nat × Nat`
+  * Field of a regular structure
 * Typeclass
 * Typeclass instance
 * Function on a type
@@ -21,7 +29,7 @@
 * Must allow adding funs to the namespaces
 * Should use the "Def" keyword, not "Type" keyword (because some types are Props)
 
-### Estimators
+#### Estimators
 
 * Time to find the declaration via search
 * Time to find the file via search

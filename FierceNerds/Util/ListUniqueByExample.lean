@@ -3,7 +3,7 @@ import FierceNerds.Util.Example.Library
 
 namespace FierceNerds.Util.ListUniqueBy
 
-open FierceNerds Util Example Library
+open Example Library
 
 -- a type for a list of books unique by name
 abbrev Items := ListUniqueBy Book.name
