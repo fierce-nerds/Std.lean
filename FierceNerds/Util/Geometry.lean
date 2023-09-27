@@ -1,5 +1,5 @@
-import Playbook.Std.Geometry.Point
-import Playbook.Std.Geometry.Line
-import Playbook.Std.Geometry.Sphere
-import Playbook.Std.Geometry.Cuboid
-import Playbook.Std.Geometry.Instance
+import FierceNerds.Util.Geometry.Point
+import FierceNerds.Util.Geometry.Line
+import FierceNerds.Util.Geometry.Sphere
+import FierceNerds.Util.Geometry.Cuboid
+import FierceNerds.Util.Geometry.Instance

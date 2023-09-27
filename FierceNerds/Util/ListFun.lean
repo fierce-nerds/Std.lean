@@ -2,25 +2,19 @@ import Mathlib.Data.List.Basic
 import Mathlib.Init.ZeroOne
 import Mathlib.Data.List.Sort
 
+namespace FierceNerds.Util
+
 namespace List
-
-def isNil : List α → Bool
-  | .nil => true
-  | _ => false
-
-def isCons : List α → Bool
-  | .nil => false
-  | _ => true
 
 def flatten (xs : List (List α)) := xs.foldr .append []
 
 def toAnd (xs : List Prop) := xs.foldr And True
 
-def allSatisfy (p : α → Prop) (xs : List α) : Prop := xs |>.map p |>.toAnd
+def allSatisfy (p : α → Prop) (xs : List α) : Prop := xs |>.map p |> toAnd
 
-def allSatisfied {α : Type u} (x : α) (ps : List (α → Prop)) : Prop := ps |>.map (· x) |>.toAnd
+def allSatisfied {α : Type u} (x : α) (ps : List (α → Prop)) : Prop := ps |>.map (· x) |> toAnd
 
-def allSatisfyAll (ps : List (α → Prop)) (xs : List α) : Prop := xs |>.map (fun x => ps |>.map (· x) |>.toAnd) |>.toAnd
+def allSatisfyAll (ps : List (α → Prop)) (xs : List α) : Prop := xs |>.map (fun x => ps |>.map (· x) |> toAnd) |> toAnd
 
 def allTrue (xs : List Bool) := xs.all id
 

@@ -1,5 +1,5 @@
-import Playbook.Std.UniqueBy
-import Playbook.Std.SortedBy
+import FierceNerds.Util.UniqueBy
+import FierceNerds.Util.SortedBy
 
 namespace FierceNerds.Util.UniqueBy
 

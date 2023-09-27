@@ -1,5 +1,5 @@
 import Mathlib.Data.Vector
-import Playbook.Std.Data.Vector
+import FierceNerds.Util.Data.Vector
 
 namespace FierceNerds.Util.Geometry
 

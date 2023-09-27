@@ -1,7 +1,7 @@
-import Playbook.Std
-import Playbook.Generic
+import FierceNerds.Util
+import FierceNerds.Generic
 
-open Playbook Std Generic
+open FierceNerds Util Generic
 
 namespace FierceNerds.Util.Data.List
 

@@ -1,5 +1,5 @@
-import Playbook.Std.Geometry.Line
-import Playbook.Std.Geometry.Typeclass.Intersects
+import FierceNerds.Util.Geometry.Line
+import FierceNerds.Util.Geometry.Typeclass.Intersects
 
 namespace FierceNerds.Util.Geometry
 

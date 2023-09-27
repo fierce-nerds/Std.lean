@@ -1,8 +1,8 @@
-import Playbook.Std
-import Playbook.Generic
+import FierceNerds.Util
+import FierceNerds.Generic
 import Mathlib.Data.Vector
 
-open Playbook Std Generic
+open FierceNerds Util Generic
 
 namespace FierceNerds.Util.Data
 

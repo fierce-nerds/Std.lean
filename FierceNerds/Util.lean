@@ -19,7 +19,7 @@ import FierceNerds.Util.Action
 -- import FierceNerds.Util.Data.List.Loop
 -- import FierceNerds.Util.Data.List.Macro
 -- import FierceNerds.Util.Data.List.String
--- import FierceNerds.Util.Data.List.UniqueBy
+-- import FierceNerds.Util.Data.ListUniqueBy
 -- import FierceNerds.Util.Data.List.Util
 -- import FierceNerds.Util.Data.Position2D
 -- import FierceNerds.Util.Data.Vector

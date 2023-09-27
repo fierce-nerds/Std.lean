@@ -1,4 +1,4 @@
-import Playbook.Std.Rat
+import FierceNerds.Util.Rat
 
 namespace FierceNerds.Util
 

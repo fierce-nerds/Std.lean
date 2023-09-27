@@ -1,5 +1,5 @@
-import Playbook.Generic.Thought.Macro
-import Playbook.Generic.Implementation
+import FierceNerds.Generic.Thought.Macro
+import FierceNerds.Generic.Implementation
 import Lean.Data.Json.FromToJson
 import Std.Data.Rat.Basic
 

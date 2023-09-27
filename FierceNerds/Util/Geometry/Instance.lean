@@ -1,7 +1,7 @@
-import Playbook.Std.Geometry.Cuboid
-import Playbook.Std.Geometry.Typeclass.Intersect
+import FierceNerds.Util.Geometry.Cuboid
+import FierceNerds.Util.Geometry.Typeclass.Intersect
 
-open Playbook.Std.Geometry.Typeclass
+open FierceNerds.Util.Geometry.Typeclass
 
 namespace FierceNerds.Util.Geometry
 

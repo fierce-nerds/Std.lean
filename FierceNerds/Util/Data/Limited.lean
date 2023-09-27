@@ -1,7 +1,7 @@
 import Std.Data.Rat
-import Playbook.Std.Rel
+import FierceNerds.Util.Rel
 
-structure Playbook.Std.Data.Limited {α : Type u} [LE α] [LT α] (min : α) (max : α) (h : min ≤ max := by decide) where
+structure FierceNerds.Util.Data.Limited {α : Type u} [LE α] [LT α] (min : α) (max : α) (h : min ≤ max := by decide) where
   value  : α
   valueIsLeMin : value ≥ min := by decide
   valueIsLtMax : value < max := by decide
@@ -9,7 +9,7 @@ deriving Repr
 
 namespace FierceNerds.Util.Data.Fin
 
-open Playbook.Std.Data
+open FierceNerds.Util.Data
 
 -- instance {α : Type u} [LE α] [LT α] (min : α) (max : α) (h : min ≤ max) : OfScientific (Fin min max h) where
 --   ofScientific mantissa exponentSign decimalExponent := 

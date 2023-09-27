@@ -1,4 +1,4 @@
-import Playbook.Std.Example.Library.Author
+import FierceNerds.Util.Example.Library.Author
 
 namespace FierceNerds.Util.Example.Library
 

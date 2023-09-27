@@ -1,4 +1,4 @@
-import Playbook.Std.LawfulLE
+import FierceNerds.Util.LawfulLE
 
 namespace FierceNerds.Util
 

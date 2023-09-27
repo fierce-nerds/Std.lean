@@ -1,5 +1,5 @@
-import Playbook.Std.Example.Library.Book
-import Playbook.Std.Example.Library.Author
+import FierceNerds.Util.Example.Library.Book
+import FierceNerds.Util.Example.Library.Author
 
 namespace FierceNerds.Util.Example
 

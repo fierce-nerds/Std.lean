@@ -1,4 +1,4 @@
-import Playbook.Std.PairwiseBy
+import FierceNerds.Util.PairwiseBy
 
 namespace FierceNerds.Util
 

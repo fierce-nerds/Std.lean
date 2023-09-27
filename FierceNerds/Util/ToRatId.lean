@@ -1,4 +1,4 @@
-import Playbook.Std.ToRat
+import FierceNerds.Util.ToRat
 import Mathlib.Init.ZeroOne
 
 namespace FierceNerds.Util

@@ -1,5 +1,5 @@
 import Std.Data.Rat.Basic
-import Playbook.Std.Data.List.Util
+import FierceNerds.Util.ListFun
 
 namespace FierceNerds.Util
 

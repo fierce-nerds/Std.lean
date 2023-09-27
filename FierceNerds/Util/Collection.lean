@@ -1,8 +1,8 @@
-import Playbook.Std
-import Playbook.Generic
-import Playbook.Std.ListPredWithEmptyPass
+import FierceNerds.Util
+import FierceNerds.Generic
+import FierceNerds.Util.ListPredWithEmptyPass
 
-open Playbook Std Generic
+open FierceNerds Util Generic
 
 namespace FierceNerds.Util
 

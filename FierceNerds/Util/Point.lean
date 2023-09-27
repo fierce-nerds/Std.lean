@@ -1,4 +1,4 @@
-import Playbook.Std.Interval
+import FierceNerds.Util.Interval
 import Std.Data.Nat.Basic
 
 namespace FierceNerds.Util
