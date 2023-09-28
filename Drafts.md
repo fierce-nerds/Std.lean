@@ -118,14 +118,29 @@
 * canEditFilesInMultiplePackagesFromSingleWorkspace
   * Can update the [parent repo](./Definitions.md#parent-repo) while working on the child repo
 * canSharePackagesWithOtherDevelopers
+* canUseCodeActionsInParentPackages
 
 #### Options
 
+* Develop in separate repos
+  * Write the initial code in a single repo
+  * Use the same namespace (e.g. `FierceNerds.Util`)
+  * Maybe: use a special lib to indicate definitions that should be extracted (e.g. `Extract`, `Addon`)
+  * Move the files to intended repos
+    * Options
+      * Manually
+      * Automatically via script
+        * Merge existing files
 * Conditional definition in lakefile
   * `let source : Source := if getEnvVar s!"{pkgName}_USE_LOCAL_DEPS" then .path _ else .git _ _ _`
 * Submodules
+* Hack in pre-commit
+  * Replace the `.path` dep with the `.git` dep before commit
+  * Restore it after commit
 * Ask lurk-lab devs
+* Ask on Zulip
 
 #### Decision
 
-* Try "conditional definition"
+* Develop in separate repos
+  * It's the only one that supports `canUseCodeActionsInParentPackages`
