@@ -1,6 +1,6 @@
-import FierceNerds.Util.Data.ListUniqueBy
+import FierceNerds.Util.Data.List.UniqueBy
 import FierceNerds.Util.HasUid
 
 namespace FierceNerds.Util
 
-def UniqueByUid [i : HasUid α] := Data.ListUniqueBy i.uid
+abbrev UniqueByUid [i : HasUid α] := Data.List.UniqueBy i.uid

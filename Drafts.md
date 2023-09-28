@@ -2,7 +2,7 @@
 
 ## Decisions
 
-### Get filesystem layout
+### Filesystem layout
 
 #### Declaration brand
 
@@ -110,3 +110,22 @@
 
 * Use BrandTypeV2
   * VSCode would show the 
+
+### Code sharing setup
+
+#### Projections
+
+* canEditFilesInMultiplePackagesFromSingleWorkspace
+  * Can update the [parent repo](./Definitions.md#parent-repo) while working on the child repo
+* canSharePackagesWithOtherDevelopers
+
+#### Options
+
+* Conditional definition in lakefile
+  * `let source : Source := if getEnvVar s!"{pkgName}_USE_LOCAL_DEPS" then .path _ else .git _ _ _`
+* Submodules
+* Ask lurk-lab devs
+
+#### Decision
+
+* Try "conditional definition"

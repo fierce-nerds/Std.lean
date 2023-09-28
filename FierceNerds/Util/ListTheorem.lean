@@ -1,6 +1,6 @@
-namespace FierceNerds.Util.Data.List
+namespace FierceNerds.Util
 
-namespace Lemmas
+namespace List
 
 theorem eq_head (a_head b_head : α) (a_tail b_tail : List α) (h : a_head :: a_tail = b_head :: b_tail) : a_head = b_head :=
   let A := List α
