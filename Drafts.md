@@ -109,7 +109,6 @@
 #### Decision
 
 * Use BrandTypeV2
-  * VSCode would show the 
 
 ### Code sharing setup
 
@@ -124,7 +123,7 @@
 
 * Develop in separate repos
   * Write the initial code in a single repo
-  * Use the same namespace (e.g. `FierceNerds.Util`)
+  * Use the same namespace (e.g. `FierceNerdsUtil`)
   * Maybe: use a special lib to indicate definitions that should be extracted (e.g. `Extract`, `Addon`)
   * Move the files to intended repos
     * Options
