@@ -6,7 +6,7 @@
 
 #### Declaration brand
 
-* Type
+* Type (`Type`)
   * Regular
     * Generic
       * `inductive`
@@ -18,16 +18,27 @@
       * Examples
         * `abbrev Point := Nat × Nat`
   * Field of a regular structure
-* Typeclass
-* Typeclass instance
-* Function on a type
-* Coercion
-* Data
+* Typeclass (`Class`)
+* Typeclass instance (`Instance`)
+* Function on a type (`Fun`)
+* Coercion (`Coe`)
+* Data (`Data`)
+* Theorem (`Theorem`)
+* Macro (`Macro`)
+* Other (`Other`)
 
 #### Filters
 
 * Must allow adding funs to the namespaces
-* Should use the "Def" keyword, not "Type" keyword (because some types are Props)
+* May use the "Type" keyword (because every `inductive` declaration is called "inductive type")
+* Must not pollute the native namespaces
+  * Examples
+    * `def singleton (c : Char) : String := ⟨[c]⟩` must be in `FierceNerdsUtil.String` namespace, not `String` namespace
+* Must determine the namespace of the function according to the type family of the output (not the type of any of the inputs)
+  * Examples
+    * `def singleton (c : Char) : String := ⟨[c]⟩` must belong to `FierceNerdsUtil.String` namespace, not `FierceNerdsUtil.Char` namespace
+* Must determine the namespace of the `Coe`-like instance by the 
+* Must place the typeclasses into their own namespaces (because they are actually types)
 
 #### Estimators
 
@@ -36,6 +47,9 @@
 * Time to find the right tab in the list
 * Count of import commands
 * How closely the file name matches the namespace
+* Whether file name contains non-ASCII characters
+  * May need to be escaped in the shell
+  * Makes it more difficult to write code that manipulates them
 
 #### Outline
 
@@ -71,8 +85,9 @@
       * ListUniqueBy.lean
         * Contains import commands for each file in subdirectory
       * ListUniqueBy/Type.lean
-      * ListUniqueBy/Coe.lean
-      * ListUniqueBy/Fun.lean
+      * ListUniqueBy/Instance/Coe.lean
+      * ListUniqueBy/Instance.lean
+      * ListUniqueBy/Fun/Basic.lean
 * Type-forward
   * Examples
     * TypeForwardV1
@@ -84,6 +99,14 @@
 * Brand-type
   * Options
     * "{brand}_{type}.lean"
+    * "{brand}'{type}.lean"
+    * "{brand}∘{type}.lean"
+    * "{brand}·{type}.lean"
+    * "{brand}⟩{type}.lean"
+    * "{brand}†{type}.lean"
+    * "{brand}▸{type}.lean"
+    * "{brand}✦{type}.lean"
+    * "{brand}★{type}.lean"
     * "{brand}{type}.lean"
     * "{type}{brand}.lean"
   * Examples
@@ -105,6 +128,9 @@
       * TypeListUniqueBy.lean
       * CoeListUniqueBy.lean
       * FunListUniqueBy.lean
+  * Notes
+    * Compound brands can be created with `∘` (example: `Char∘String`)
+    * Imports need to be quoted: `import FierceNerdsUtil.«Char∘String·Coe»`
 
 #### Decision
 

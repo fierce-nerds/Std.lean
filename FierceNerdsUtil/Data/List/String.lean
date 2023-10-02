@@ -1,4 +1,3 @@
-
 namespace FierceNerdsUtil.Data.List
 
 namespace String
