@@ -1,4 +1,4 @@
-namespace FierceNerdsUtil.Array
+namespace Array
 
 variable (as : @& Array α)
 

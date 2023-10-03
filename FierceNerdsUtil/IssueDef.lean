@@ -1,4 +1,4 @@
-import FierceNerdsUtil.ThoughtDef
+import FierceNerdsUtil.Thought.Type
 
 namespace FierceNerdsUtil
 

@@ -1,4 +1,4 @@
-import FierceNerdsUtil.ThoughtDef
+import FierceNerdsUtil.Thought.Type
 import FierceNerdsUtil.IssueDef
 import FierceNerdsUtil.IssueCoe
 import FierceNerdsUtil.IssueFun

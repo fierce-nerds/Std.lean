@@ -15,8 +15,6 @@ inductive Thought where
   | mk : (title : String) → (children : List Thought) → Thought
 deriving Repr, Inhabited, BEq
 
-abbrev Thoughts := List Thought
-
 namespace Thought
 
 variable (t : Thought)
