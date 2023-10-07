@@ -1,3 +1,3 @@
-namespace FierceNerdsUtil
+namespace System
 
 abbrev FileContent := String

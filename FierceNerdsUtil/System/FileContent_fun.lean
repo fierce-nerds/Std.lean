@@ -1,9 +1,8 @@
-import FierceNerdsUtil.FileContent.Basic
-import Init.System.FilePath
-import FierceNerdsUtil.Addon.System.FilePath.Fun
-import FierceNerdsUtil.Addon.Array.Fun.Sep
+import FierceNerdsUtil.System.FileContent_type
+import FierceNerdsUtil.System.FilePath_fun
+import FierceNerdsUtil.Array_fun_sep
 
-namespace FierceNerdsUtil
+namespace System.FileContent
 
 open Lean System FilePath
 

@@ -43,8 +43,15 @@
 #### Estimators
 
 * Time to find the declaration via search
+  * VSCode shows the filename first, followed by directory
 * Time to find the file via search
+  * VSCode filters by the filename first (so if the filename doesn't contain the type name, VSCode will show much lower in the list; even below the definitions)
 * Time to find the right tab in the list
+  * VSCode has `workbench.editor.labelFormat` option with the following possible values:
+    * `default`
+    * `short`
+    * `medium`
+    * `long`
 * Count of import commands
 * How closely the file name matches the namespace
 * Whether file name contains non-ASCII characters
@@ -52,9 +59,6 @@
   * Makes it more difficult to write code that manipulates them
 
 #### Outline
-
-* In search, VSCode shows the filename first, followed by directory
-* In tab title, VSCode shows only the filename
 
 #### Questions
 
@@ -131,6 +135,10 @@
   * Notes
     * Compound brands can be created with `∘` (example: `Char∘String`)
     * Imports need to be quoted: `import FierceNerdsUtil.«Char∘String·Coe»`
+* Namespace-first
+  * Examples
+    * FierceNerdsUtil/System/FilePath_Fun.lean
+    * FierceNerdsUtil/FierceNerds/Thought_Type.lean
 
 #### Decision
 

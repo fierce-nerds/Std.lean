@@ -1,21 +1,6 @@
-import FierceNerdsUtil.Char
+import FierceNerdsUtil.System.FilePath_fun
 
 namespace System.FilePath
-
-/--
-Level is the distance from the root of the filesystem hierarchy
--/
-def level (path : System.FilePath) : Nat :=
-  path
-  |>.normalize
-  |>.toString
-  |>.splitOn pathSeparator.toString
-  |>.filter (·.length ≠ 0)
-  |>.length
-
-namespace Level
-
-section Examples
 
 -- root folder level is zero
 def root : FilePath := "/"

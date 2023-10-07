@@ -1,6 +1,6 @@
 import Init.System.FilePath
-import FierceNerdsUtil.Addon.String.Coe
-import FierceNerdsUtil.Addon.Array.Fun.Basic
+import FierceNerdsUtil.String_coe
+import FierceNerdsUtil.Array_fun_basic
 
 namespace System.FilePath
 

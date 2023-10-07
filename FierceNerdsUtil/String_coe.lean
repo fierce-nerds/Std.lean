@@ -1,4 +1,4 @@
-import FierceNerdsUtil.Addon.String.Fun
+import FierceNerdsUtil.String_fun
 
 namespace String
 
