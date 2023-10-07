@@ -1,7 +1,7 @@
-import FierceNerdsUtil.Thought.Type
-import FierceNerdsUtil.IssueDef
-import FierceNerdsUtil.IssueCoe
-import FierceNerdsUtil.IssueFun
+import FierceNerdsUtil.FierceNerds.Util.Thought_type
+import FierceNerdsUtil.FierceNerds.Util.Issue_type
+import FierceNerdsUtil.FierceNerds.Util.Issue_coe_from
+import FierceNerdsUtil.FierceNerds.Util.Issue_fun
 -- import FierceNerdsUtil.BEq
 -- import FierceNerdsUtil.Bag
 -- import FierceNerdsUtil.Bags
@@ -27,9 +27,9 @@ import FierceNerdsUtil.IssueFun
 -- import FierceNerdsUtil.Data.Position2D
 -- import FierceNerdsUtil.Data.Vector
 -- import FierceNerdsUtil.EqBy
--- import FierceNerdsUtil.Example.Library
--- import FierceNerdsUtil.Example.Library.Author
--- import FierceNerdsUtil.Example.Library.Book
+-- import FierceNerdsUtil.FierceNerds.Example.Library
+-- import FierceNerdsUtil.FierceNerds.Example.Library.Author
+-- import FierceNerdsUtil.FierceNerds.Example.Library.Book
 -- import FierceNerdsUtil.Except
 -- import FierceNerdsUtil.False
 -- import FierceNerdsUtil.Filter
