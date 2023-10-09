@@ -1,7 +1,7 @@
 import Std.Data.HashMap
 import Mathlib.Data.HashMap
 import Mathlib.Init.ZeroOne
-import FierceNerdsUtil.Data.ListUniqueBy
+import Mathlib.Data.List.Basic
 
 open Std
 

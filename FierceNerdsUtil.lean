@@ -1,88 +1,103 @@
-import FierceNerdsUtil.FierceNerds.Util.Thought_type
-import FierceNerdsUtil.FierceNerds.Util.Issue_type
+import FierceNerdsUtil.Array_fun_basic
+import FierceNerdsUtil.Array_fun_sep
+import FierceNerdsUtil.Char_fun
+import FierceNerdsUtil.Except_coe_in
+import FierceNerdsUtil.Except_coe_out
+import FierceNerdsUtil.Except_fun
+import FierceNerdsUtil.False_theorem
+import FierceNerdsUtil.FierceNerds.Example.Library
+import FierceNerdsUtil.FierceNerds.Example.Library.Author
+import FierceNerdsUtil.FierceNerds.Example.Library.Book
+import FierceNerdsUtil.FierceNerds.Geometry
+import FierceNerdsUtil.FierceNerds.Geometry.Cuboid_type
+import FierceNerdsUtil.FierceNerds.Geometry.HIntersects_class
+import FierceNerdsUtil.FierceNerds.Geometry.Intersects_class
+import FierceNerdsUtil.FierceNerds.Geometry.Line_type
+import FierceNerdsUtil.FierceNerds.Geometry.Point_type
+import FierceNerdsUtil.FierceNerds.Geometry.Sphere_type
+import FierceNerdsUtil.FierceNerds.Util.AssocList_all
+import FierceNerdsUtil.FierceNerds.Util.BEqBy_type
+import FierceNerdsUtil.FierceNerds.Util.Bag_all
+import FierceNerdsUtil.FierceNerds.Util.BagsUnique_all
+import FierceNerdsUtil.FierceNerds.Util.Bags_all
+import FierceNerdsUtil.FierceNerds.Util.ChainwiseList_type
+import FierceNerdsUtil.FierceNerds.Util.ChainwiseLists_type
+import FierceNerdsUtil.FierceNerds.Util.Collection_all
+import FierceNerdsUtil.FierceNerds.Util.Cyclical_all
+import FierceNerdsUtil.FierceNerds.Util.EqBy_all
+import FierceNerdsUtil.FierceNerds.Util.Filter_all
+import FierceNerdsUtil.FierceNerds.Util.FinLE_type
+import FierceNerdsUtil.FierceNerds.Util.FinNZ_type
+import FierceNerdsUtil.FierceNerds.Util.Fintype_type
+import FierceNerdsUtil.FierceNerds.Util.HasId_class
+import FierceNerdsUtil.FierceNerds.Util.HasUid_class
+import FierceNerdsUtil.FierceNerds.Util.HashMap_all
+import FierceNerdsUtil.FierceNerds.Util.Id_type
+import FierceNerdsUtil.FierceNerds.Util.Injective_def
+import FierceNerdsUtil.FierceNerds.Util.Interval_type
 import FierceNerdsUtil.FierceNerds.Util.Issue_coe_from
 import FierceNerdsUtil.FierceNerds.Util.Issue_fun
--- import FierceNerdsUtil.BEq
--- import FierceNerdsUtil.Bag
--- import FierceNerdsUtil.Bags
--- import FierceNerdsUtil.BagsUnique
--- import FierceNerdsUtil.Char
--- import FierceNerdsUtil.Coe.ExceptBool
--- import FierceNerdsUtil.Coe.ExceptOption
--- import FierceNerdsUtil.Collection
--- import FierceNerdsUtil.Cyclical
--- import FierceNerdsUtil.Data.AssocList
--- import FierceNerdsUtil.Data.HashMap
--- import FierceNerdsUtil.Data.Limited
--- import FierceNerdsUtil.Data.List.AllEq
--- import FierceNerdsUtil.Data.List.Chainwise
--- import FierceNerdsUtil.Data.List.Chainwise.Example
--- import FierceNerdsUtil.Data.List.Extension.Chainwise
--- import FierceNerdsUtil.Data.List.Lemmas
--- import FierceNerdsUtil.Data.List.Loop
--- import FierceNerdsUtil.Data.List.Macro
--- import FierceNerdsUtil.Data.List.String
--- import FierceNerdsUtil.Data.ListUniqueBy
--- import FierceNerdsUtil.Data.List.Util
--- import FierceNerdsUtil.Data.Position2D
--- import FierceNerdsUtil.Data.Vector
--- import FierceNerdsUtil.EqBy
--- import FierceNerdsUtil.FierceNerds.Example.Library
--- import FierceNerdsUtil.FierceNerds.Example.Library.Author
--- import FierceNerdsUtil.FierceNerds.Example.Library.Book
--- import FierceNerdsUtil.Except
--- import FierceNerdsUtil.False
--- import FierceNerdsUtil.Filter
--- import FierceNerdsUtil.Fin
--- import FierceNerdsUtil.FinNe0
--- import FierceNerdsUtil.Fintype
--- import FierceNerdsUtil.Geometry
--- import FierceNerdsUtil.Geometry.Cuboid
--- import FierceNerdsUtil.Geometry.Instance
--- import FierceNerdsUtil.Geometry.Line
--- import FierceNerdsUtil.Geometry.Point
--- import FierceNerdsUtil.Geometry.Sphere
--- import FierceNerdsUtil.Geometry.Typeclass.HIntersects
--- import FierceNerdsUtil.Geometry.Typeclass.Intersects
--- import FierceNerdsUtil.HasId
--- import FierceNerdsUtil.HasUid
--- import FierceNerdsUtil.IO
--- import FierceNerdsUtil.Id
--- import FierceNerdsUtil.Injective
--- import FierceNerdsUtil.Interval
--- import FierceNerdsUtil.LawfulLE
--- import FierceNerdsUtil.Lens
--- import FierceNerdsUtil.ListPredWithEmptyPass
--- import FierceNerdsUtil.Mapper
--- import FierceNerdsUtil.Mutator
--- import FierceNerdsUtil.NodeV1
--- import FierceNerdsUtil.NodeV2
--- import FierceNerdsUtil.NonEmptyList
--- import FierceNerdsUtil.NonemptyInterval
--- import FierceNerdsUtil.Optimal
--- import FierceNerdsUtil.Option
--- import FierceNerdsUtil.PairwiseBy
--- import FierceNerdsUtil.PairwiseByExample
--- import FierceNerdsUtil.Point
--- import FierceNerdsUtil.Pos
--- import FierceNerdsUtil.Pred
--- import FierceNerdsUtil.Projections
--- import FierceNerdsUtil.Rat
--- import FierceNerdsUtil.Rel
--- import FierceNerdsUtil.SI.Unit
--- import FierceNerdsUtil.SI.Unit.AsRat
--- import FierceNerdsUtil.SortedBy
--- import FierceNerdsUtil.String
--- import FierceNerdsUtil.Subtype
--- import FierceNerdsUtil.SubtypeGen
--- import FierceNerdsUtil.System.FilePath.Level
--- import FierceNerdsUtil.ToRat
--- import FierceNerdsUtil.ToRatId
--- import FierceNerdsUtil.ToSort
--- import FierceNerdsUtil.Todo
--- import FierceNerdsUtil.TypedValue
--- import FierceNerdsUtil.Uid
--- import FierceNerdsUtil.UniqueBy
--- import FierceNerdsUtil.UniqueBy.Lemmas
--- import FierceNerdsUtil.UniqueByUid
--- import FierceNerdsUtil.Url
+import FierceNerdsUtil.FierceNerds.Util.Issue_type
+import FierceNerdsUtil.FierceNerds.Util.LawfulLE_class
+import FierceNerdsUtil.FierceNerds.Util.Lens_type
+import FierceNerdsUtil.FierceNerds.Util.Limited_all
+import FierceNerdsUtil.FierceNerds.Util.List.AllEq
+import FierceNerdsUtil.FierceNerds.Util.List.Chainwise.Example
+import FierceNerdsUtil.FierceNerds.Util.List.Loop
+import FierceNerdsUtil.FierceNerds.Util.List.Macro
+import FierceNerdsUtil.FierceNerds.Util.ListPredWithEmptyPass_type
+import FierceNerdsUtil.FierceNerds.Util.ListUniqueBy_example
+import FierceNerdsUtil.FierceNerds.Util.ListUniqueBy_fun
+import FierceNerdsUtil.FierceNerds.Util.ListUniqueBy_instance
+import FierceNerdsUtil.FierceNerds.Util.ListUniqueBy_type
+import FierceNerdsUtil.FierceNerds.Util.Mapper_type
+import FierceNerdsUtil.FierceNerds.Util.Mutator_type
+import FierceNerdsUtil.FierceNerds.Util.NodeV1_type
+import FierceNerdsUtil.FierceNerds.Util.NodeV2_type
+import FierceNerdsUtil.FierceNerds.Util.NonEmptyList_all
+import FierceNerdsUtil.FierceNerds.Util.Optimal_type
+import FierceNerdsUtil.FierceNerds.Util.PairwiseBy_example
+import FierceNerdsUtil.FierceNerds.Util.PairwiseBy_type
+import FierceNerdsUtil.FierceNerds.Util.Point_all
+import FierceNerdsUtil.FierceNerds.Util.Pos_all
+import FierceNerdsUtil.FierceNerds.Util.Position2D
+import FierceNerdsUtil.FierceNerds.Util.Projections_type
+import FierceNerdsUtil.FierceNerds.Util.Rate_type
+import FierceNerdsUtil.FierceNerds.Util.Rel_type
+import FierceNerdsUtil.FierceNerds.Util.SIUnitAsRat_rest
+import FierceNerdsUtil.FierceNerds.Util.SIUnit_rest
+import FierceNerdsUtil.FierceNerds.Util.SIUnit_thoughts
+import FierceNerdsUtil.FierceNerds.Util.SIUnit_type
+import FierceNerdsUtil.FierceNerds.Util.Scaffold
+import FierceNerdsUtil.FierceNerds.Util.SortedBy_type
+import FierceNerdsUtil.FierceNerds.Util.SubtypeSort_type
+import FierceNerdsUtil.FierceNerds.Util.Thought_macro
+import FierceNerdsUtil.FierceNerds.Util.Thought_type
+import FierceNerdsUtil.FierceNerds.Util.Thoughts_macro
+import FierceNerdsUtil.FierceNerds.Util.Thoughts_type
+import FierceNerdsUtil.FierceNerds.Util.ToRatId_class
+import FierceNerdsUtil.FierceNerds.Util.ToRat_class
+import FierceNerdsUtil.FierceNerds.Util.ToSort_class
+import FierceNerdsUtil.FierceNerds.Util.Todo_fun
+import FierceNerdsUtil.FierceNerds.Util.TypedValue_type
+import FierceNerdsUtil.FierceNerds.Util.Uid_type
+import FierceNerdsUtil.FierceNerds.Util.UniqueByUid_type
+import FierceNerdsUtil.FierceNerds.Util.UniqueBy_theorem
+import FierceNerdsUtil.FierceNerds.Util.UniqueBy_type
+import FierceNerdsUtil.FierceNerds.Util.Vector_all
+import FierceNerdsUtil.IO_fun_basic
+import FierceNerdsUtil.List_fun_basic
+import FierceNerdsUtil.List_fun_is
+import FierceNerdsUtil.List_fun_sep
+import FierceNerdsUtil.List_theorem
+import FierceNerdsUtil.NonemptyInterval_fun
+import FierceNerdsUtil.Option_abbrev
+import FierceNerdsUtil.Pred_type
+import FierceNerdsUtil.Rat_instance
+import FierceNerdsUtil.String_coe
+import FierceNerdsUtil.String_fun
+import FierceNerdsUtil.Subtype_abbrev
+import FierceNerdsUtil.System.FileContent_fun
+import FierceNerdsUtil.System.FileContent_type
+import FierceNerdsUtil.System.FilePath_example_level
+import FierceNerdsUtil.System.FilePath_fun

@@ -6,6 +6,14 @@ namespace System.FilePath
 
 open Lean
 
+def level (path : System.FilePath) : Nat :=
+  path
+  |>.normalize
+  |>.toString
+  |>.splitOn pathSeparator.toString
+  |>.filter (·.length ≠ 0)
+  |>.length
+
 def getLeanFilePaths (dir : FilePath) : IO (Array FilePath) :=
   dir.walkDir (fun path => do pure (path.toString.endsWith ".lean"))
 

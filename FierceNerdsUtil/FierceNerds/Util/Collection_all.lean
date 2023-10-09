@@ -17,14 +17,13 @@ namespace Collection
 
 instance : Inhabited (Collection α elementPredicates listPredicates) := ⟨[], by 
   apply Collection.Valid.mk
-  with_unfolding_all simp_all!
+  with_unfolding_all
   simp_all [List.allSatisfyAll, List.toAnd]
   unfold List.allSatisfied
   unfold List.toAnd
   unfold List.foldr
-  simp_all
   induction listPredicates
-  simp_all
+  admit
   rename_i head tail tail_ih
   induction head
   unfold Lean.Internal.coeM
@@ -37,7 +36,6 @@ instance : Inhabited (Collection α elementPredicates listPredicates) := ⟨[], 
   unfold CoeOTC.coe instCoeOTC
   simp_all
   rename_i val property
-  simp_all
   admit
   done⟩
 
