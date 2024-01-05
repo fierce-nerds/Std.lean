@@ -4,13 +4,13 @@ namespace FierceNerds.Util.SIUnit
 
 def spec : Thoughts := [
   "Must allow to use any exponent",
-  "Must allow to operations on values with same units" ♢ [
-    "Examples" ♢ [
+  "Must allow to operations on values with same units" ⟡ [
+    "Examples" ⟡ [
       "It's possible to add seconds and seconds"
     ]
   ],
-  "Must disallow to add values with different units" ♢ [
-    "Examples" ♢ [
+  "Must disallow to add values with different units" ⟡ [
+    "Examples" ⟡ [
       "It's impossible to add seconds and meters"
     ]
   ]
@@ -69,7 +69,7 @@ def spec : Thoughts := [
 --       def SIUnit (α : Type u) := Rat
 --     ",
 --     thoughts := [
---       "Lean still thinks that nominally different types are equal" ♢ [
+--       "Lean still thinks that nominally different types are equal" ⟡ [
 --         "Because they reduce to the same term"
 --       ]
 --     ]
