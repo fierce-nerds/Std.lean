@@ -20,6 +20,13 @@ def allTruthy [Coe α Bool] (xs : List α) := xs.all (· = true)
 
 def filterBy [BEq β] (xs : List α) (f : α → β) (b : β) := xs.filter fun l => (f l) == b
 
+def replaceBy (find? : α → List α → Option α) (news : List α) (olds : List α) :=
+  olds.map fun old =>
+    let new? := find? old news
+    match new? with
+    | .some new => new
+    | .none => old
+
 def appendN (target : List α) (init : List α) (n : Nat) : List α :=
   match n with
   | 0 => target
